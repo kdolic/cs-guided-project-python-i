@@ -9,7 +9,14 @@ Examples:
 - sort_by_length(["apple", "pie", "shortcake"]) ➞ ["pie", "apple", "shortcake"]
 - sort_by_length(["may", "april", "september", "august"]) ➞ ["may", "april", "august", "september"]
 - sort_by_length([]) ➞ []
+
+INPUT: lst --> array 
+OUTPUT: lst --> array (sorted)
 """
 def sort_by_length(lst):
-    # Your code here
+    # sort method to sort ascending order of input array values
+    lst.sort();
 
+    return lst;
+
+print(sort_by_length(["a", "ccc", "dddd", "bb"]));
