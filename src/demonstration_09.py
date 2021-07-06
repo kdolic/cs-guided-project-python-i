@@ -11,7 +11,19 @@ Examples:
 
 Notes:
 - All of the letters in the input list will always be lowercase.
+
+INPUT: letters --> array
+OUTPUT: newDict --> dictionary listing the new uppercase letters
 """
 def mapping(letters):
-    # Your code here
+    newDict = {}
+    # loop through the letters, convert the letter to uppercase based on index
+    for ltr in letters:
+        newDict[ltr] = ltr.upper()
+
+    return newDict
+
+print(mapping(["p", "s"]))
+print(mapping(["a", "b", "c"]))
+print(mapping(["a", "v", "y", "z"]))
 

@@ -12,7 +12,21 @@ Notes:
 - The discount is the percentage of the original price (i.e the discount of
 "75%" to 12 would be 9 as opposed to taking off 75% (making 3)).
 - There won't be any awkward decimal numbers, only 0.5 to deal with.
+
+INPUT: nums --> array, percentage --> string
+OUTPUT: newArr --> array 
 """
 def get_discounts(nums, percentage):
-    # Your code here
+    newArr = []
+    # converts to percentage decimal 
+    percentDecimal = int(percentage.split('%')[0]) / 100
+    # loops through the nums array and adds value with the percent
+    for x in nums:
+        newArr.append(x * percentDecimal)
+
+    return newArr
+
+print(get_discounts([2, 4, 6, 11], "50%"))
+print(get_discounts([10, 20, 40, 80], "75%"))
+print(get_discounts([100], "45%"))
 

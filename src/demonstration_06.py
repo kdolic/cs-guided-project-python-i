@@ -14,7 +14,21 @@ Examples:
 - XO("ooxXm") ➞ True (Case insensitive)
 - XO("zpzpzpp") ➞ True (Returns True if no x and o)
 - XO("zzoo") ➞ False
+
+INPUT: txt --> string
+OUTPUT: True or False --> boolean
 """
 def XO(txt):
-    # Your code here
+    # method to lower case the input txt
+    lowerText = txt.lower();
+    # if the count of 'x' matches the count of 'o' --> True
+    if lowerText.count("x") == lowerText.count("o"):
+        return True
+    elif lowerText.count("x") == 0 and lowerText.count("o") == 0:
+        return True
+    # otherwise --> False
+    else:
+        return False
+
+print(XO("ooxx"))
 
